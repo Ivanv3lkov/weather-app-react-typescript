@@ -1,0 +1,18 @@
+@import '~antd/dist/antd.css';
+
+.search-container {
+    background-color: lightgrey;
+    height: 300px;
+    padding-top: 4em;
+}
+
+.title {
+   text-align: center
+   
+}
+
+ .input-container {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+ }

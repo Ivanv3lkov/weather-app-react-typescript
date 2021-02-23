@@ -1,0 +1,13 @@
+.weather-container {
+display: flex;
+text-align: center;
+justify-content: space-around;
+font-size: 1.5em
+}
+
+.city {
+  font-size: 3.5em;
+  text-align: center;
+  justify-content: space-around;
+}
+
