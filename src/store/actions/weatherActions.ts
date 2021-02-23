@@ -19,10 +19,11 @@ export const getWeather = (city: string): ThunkAction<void, RootState, null, Wea
         type: ActionTypes.GET_WEATHER,
         payload: responseData
       });
-    } catch(err) {
+    } catch(error) {
+      
       dispatch({
         type: ActionTypes.SET_ERROR,
-        payload: err.message
+        payload: error.message
       });
     }
   }

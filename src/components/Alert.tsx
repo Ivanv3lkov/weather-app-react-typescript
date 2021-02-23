@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Alert.css';
 
 interface AlertProps {
   message: string;
@@ -6,16 +7,16 @@ interface AlertProps {
 }
 
 const Alert: React.FC<AlertProps> = ({ message, onClose }) => {
+  const errorMessage = message[0].toUpperCase() + message.substring(1);
+
   return (
-    <div>
+    <div className="alert">
       <div onClick={onClose}></div>
       <div>
-        <header >
-          <p>{message}</p>
-        </header>
-        <footer >
+        <h3 >
+          <p>{errorMessage}</p>
+        </h3>
           <button onClick={onClose}>Close</button>
-        </footer>
       </div>
     </div>
   );
