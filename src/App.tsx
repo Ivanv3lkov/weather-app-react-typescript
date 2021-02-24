@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Searching title="Enter city name and press search button" />
+      <Searching />
       {loading ? <Spinner /> : weatherData && <Weather data={weatherData} />}
 
       {alertMessage && <Alert message={alertMessage} onClose={() => dispatch(setAlert(''))} />}

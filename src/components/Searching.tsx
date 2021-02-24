@@ -1,16 +1,12 @@
 import React, { useState, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/Search.css';
+
 import { setAlert } from '../store/actions/alertActions';
 import { getWeather, setLoading, setError } from '../store/actions/weatherActions';
 import { Input, message, Button, Space } from 'antd';
 
-
-interface SearchProps {
-  title: string;
-}
-
-const Searching: React.FC<SearchProps> = ({ title }) => {
+const Searching: React.FC = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
 
@@ -45,8 +41,8 @@ const Searching: React.FC<SearchProps> = ({ title }) => {
   }
 
   return (
-    <div className='search-container'>
-      <h1 className="title">{title}</h1>
+    <div className="search-container">
+      <h1 className="title">Enter city name and press search button</h1>
       <div className="input-container">
         <Input
           type="text"
