@@ -57,7 +57,6 @@ export interface WeatherError {
 export interface WeatherState {
   data: WeatherData | null;
   loading: boolean;
-  error: string;
 }
 
 interface GetWeatherAction {
@@ -71,16 +70,7 @@ interface SetLoadingAction {
 
 interface SetErrorAction {
   type: typeof ActionTypes.SET_ERROR;
-  payload: string;
 }
 
 export type WeatherAction = GetWeatherAction | SetLoadingAction | SetErrorAction;
 
-export interface AlertAction {
-  type: typeof ActionTypes.SET_ALERT;
-  payload: string;
-}
-
-export interface AlertState {
-  message: string;
-}

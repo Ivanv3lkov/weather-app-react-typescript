@@ -2,21 +2,13 @@ import React, { useState, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/Search.css';
 
-import { setAlert } from '../store/actions/alertActions';
-import { getWeather, setLoading, setError } from '../store/actions/weatherActions';
-import { Input, message, Button, Space } from 'antd';
+import { getWeather, setLoading } from '../store/actions/weatherActions';
+import { Input, Button, Space } from 'antd';
+import {error} from './Alert';
 
-const Searching: React.FC = () => {
+const Search: React.FC = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
-
-  const success = () => {
-    message.success('This is a success message');
-  };
-
-  const error = () => {
-    message.error('This is an error message');
-  };
 
   const changeHandler = (event: FormEvent<HTMLInputElement>) => {
     setCity(event.currentTarget.value);
@@ -24,19 +16,13 @@ const Searching: React.FC = () => {
 
   const onClickHandler = () => {
     if (city.trim() === '') {
-      error();
-      dispatch(setAlert('City is required!'));
+      error('City name is required!');
     } else if (!isNaN(Number(city))) {
-      error();
-      dispatch(setAlert('Please enter a city name!'));
-      dispatch(setError());
+      error('Please enter a city name and not numbers!');
     } else {
-      success();
       dispatch(setLoading());
       dispatch(getWeather(city));
       setCity('');
-      console.log('else');
-      console.log(Number(city));
     }
   }
 
@@ -59,4 +45,4 @@ const Searching: React.FC = () => {
   );
 }
 
-export default Searching;
+export default Search;
