@@ -10,8 +10,15 @@
    text-align: center;
 }
 
- .input-container {
+ .input-field-and-button {
     display: flex;
     width: 350px;
     margin: 0 auto;
+ }
+
+ .ant-input {
+    border: 1px solid lightblue;
+ }
+ .ant-input.invalid {
+  border: 1px solid red;
  }
