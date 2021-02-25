@@ -48,6 +48,10 @@ const Search: React.FC = () => {
     }
   }
 
+  const onCopyButtonClick = () => {
+   navigator.clipboard.writeText(city);
+  }
+
   return (
     <div className="search-container">
       <h1 className="title">Enter city name and press search button</h1>
@@ -62,6 +66,7 @@ const Search: React.FC = () => {
           />
           <Space>
             <Button onClick={onClickHandler}>Search</Button>
+            <Button onClick={onCopyButtonClick}>Copy</Button>
           </Space>
       </div>
 
