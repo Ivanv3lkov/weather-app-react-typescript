@@ -13,14 +13,12 @@ export const getWeatherData = (responseData: WeatherData ): WeatherAction => {
 export const setLoading = (): WeatherAction => {
   return {
     type: ActionTypes.SET_LOADING,
-    loading: true
   }
 }
 
 export const setError = (): WeatherAction => {
   return {
     type: ActionTypes.SET_ERROR,
-    loading: false
   }
 }
 
