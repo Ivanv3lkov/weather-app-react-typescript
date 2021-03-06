@@ -73,4 +73,3 @@ interface SetErrorAction {
 }
 
 export type WeatherAction = GetWeatherAction | SetLoadingAction | SetErrorAction;
-
