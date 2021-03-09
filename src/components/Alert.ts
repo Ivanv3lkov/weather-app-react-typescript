@@ -7,5 +7,3 @@ export const success = () => {
 export const error = (currentMessage: string) => {
     message.error(currentMessage);
 };
-
-
