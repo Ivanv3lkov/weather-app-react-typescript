@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './App.css';
 import { RootState } from './store';
 import Search from './components/Search';
 import Weather from './components/Weather';
