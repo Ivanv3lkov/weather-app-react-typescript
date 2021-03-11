@@ -24,16 +24,16 @@ const Search: React.FC = () => {
       }
     }
     setCity(inputValue);
-  
-		function initAutocomplete() {
+
+    function initAutocomplete() {
       const inputField = document.querySelector('.ant-input') as HTMLInputElement;
-			let searchBox = new window.google.maps.places.SearchBox(inputField);
-			searchBox.addListener('places_changed', function() {
-			setCity(city);
-			});
-		}
-  
-		initAutocomplete();
+      let searchBox = new window.google.maps.places.SearchBox(inputField);
+      searchBox.addListener('places_changed', function () {
+        setCity(city);
+      });
+    }
+
+    initAutocomplete();
   }
 
   const onClickHandler = () => {
@@ -49,28 +49,26 @@ const Search: React.FC = () => {
   }
 
   const onCopyButtonClick = () => {
-   navigator.clipboard.writeText(city);
+    navigator.clipboard.writeText(city);
   }
 
   return (
     <div className="search-container">
       <h1 className="title">Enter city name and press search button</h1>
       <div className="input-field-and-button">
-          <input
-            onChange={onChangeHandler}
-            className='ant-input'
-            type="text"
-            placeholder="Enter city name"
-            value={city}
-            
-          />
-          <Space>
-            <Button onClick={onClickHandler}>Search</Button>
-            <Button onClick={onCopyButtonClick}>Copy</Button>
-          </Space>
+        <input
+          onChange={onChangeHandler}
+          className='ant-input'
+          type="text"
+          placeholder="Enter city name"
+          value={city}
+        />
+        <Space>
+          <Button onClick={onClickHandler}>Search</Button>
+          <Button onClick={onCopyButtonClick}>Copy</Button>
+        </Space>
       </div>
-
-      </div>
+    </div>
   );
 }
 
