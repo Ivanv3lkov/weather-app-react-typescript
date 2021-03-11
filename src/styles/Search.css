@@ -21,5 +21,5 @@
 }
 
 .ant-input.invalid {
-  border: 1px solid red;
+  border: 0.5px solid red;
 }
