@@ -1,7 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/Search.css';
-import PlacesAutocomplete from "react-places-autocomplete";
 
 import { getWeather, setLoading } from '../store/actions/weatherActions';
 import { Button, Space } from 'antd';
