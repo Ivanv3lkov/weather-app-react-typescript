@@ -19,6 +19,9 @@
  .ant-input {
     border: 1px solid lightblue;
  }
+
+
+
  .ant-input.invalid {
   border: 1px solid red;
  }
