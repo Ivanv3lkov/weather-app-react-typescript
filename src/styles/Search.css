@@ -1,24 +1,25 @@
 @import '~antd/dist/antd.css';
 
 .search-container {
-    background-color: lightgrey;
-    height: 300px;
-    padding-top: 4em;
+   background-color: lightgrey;
+   height: 300px;
+   padding-top: 4em;
 }
 
 .title {
    text-align: center;
 }
 
- .input-field-and-button {
-    display: flex;
-    width: 350px;
-    margin: 0 auto;
- }
+.input-field-and-button {
+   display: flex;
+   width: 350px;
+   margin: 0 auto;
+}
 
- .ant-input {
+.ant-input {
     border: 1px solid lightblue;
- }
- .ant-input.invalid {
+}
+
+.ant-input.invalid {
   border: 1px solid red;
- }
+}
