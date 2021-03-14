@@ -1,4 +1,4 @@
-# weather-app-react-redux-typescript
+# Weather-App-React-Redux-TypeScript
 
 [Live Preview](https://apps.damirpristav.com/weather-app/)
 
