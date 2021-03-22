@@ -4,7 +4,6 @@ import { RootState } from './store';
 import Search from './components/Search';
 import Weather from './components/Weather';
 
-
 import Spinner from './components/Spinner';
 
 const App: React.FC = () => {
@@ -13,10 +12,8 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      
       <Search />
       {loading ? <Spinner /> : weatherData && <Weather data={weatherData} />}
-      
     </div>
   );
 }
