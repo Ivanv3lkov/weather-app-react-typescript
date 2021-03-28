@@ -27,7 +27,6 @@ export const getWeather = (city: string): ThunkAction<void, RootState, null, Wea
   return async dispatch => {
     try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`);
-      
       if (!response.ok) {
         const responseData: WeatherError = await response.json();
         const errorMesage = responseData.message[0].toUpperCase() + responseData.message.substring(1);
@@ -38,7 +37,6 @@ export const getWeather = (city: string): ThunkAction<void, RootState, null, Wea
       success();
       const responseData: WeatherData = await response.json();
       dispatch(getWeatherData(responseData));
-
     } catch (error) {
       dispatch(setError());
     }
