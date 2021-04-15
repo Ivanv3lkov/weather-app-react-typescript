@@ -4,7 +4,6 @@ import { RootState } from './store';
 import Search from './components/Search';
 import Weather from './components/Weather';
 
-
 import Spinner from './components/Spinner';
 
 const App: React.FC = () => {
